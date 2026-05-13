@@ -1,0 +1,120 @@
+/* Ordine di applicazione delle regole CSS: - Ereditarietà, Generics, Classi, ID */
+
+/* Imposta il colore del testo per tutti i paragrafi (Generico)*/
+p {
+
+  color: blue;
+
+}
+
+
+p {
+
+  color: red;
+
+}
+/*Questo serve per capire l ereditarieta'(viene prima il Generico), non si contraddicono se ad esempio mettere grandezza, grassetto ecc.*/
+div {
+
+  color: green;
+
+}
+
+p {
+
+  color: blue;
+
+}
+
+.testo {
+
+  color: orange;
+
+}
+
+/*Va a specificare una classe con l (#) ovvero =id */
+#titolo {
+
+  color: red;
+
+}
+
+body {
+/* Imposta il colore di sfondo scuro per l'intera pagina (formato Esadecimale) */
+  background-color: #584848;
+
+
+/* Definisce il carattere principale; 'sans-serif' interviene nel caso in cui Arial non sia disponibile sul dispositivo */
+  font-family: Arial, sans-serif;
+
+}
+
+/* Il punto (.) indica un "selettore di classe". Questa regola si applica unicamente al <div class="box"> */
+.box {
+
+
+  background-color: rgba(193, 128, 128, 0.592);
+
+/* Aggiunge uno spazio interno di 20 pixel tra i bordi del box e i testi al suo interno */
+  padding: 20px;
+
+
+}
+
+
+/* Regole per il titolo principale */
+h1 {
+
+
+  color: #06090c;
+
+
+/* Dimensione del carattere: 2rem equivale a 2 volte la dimensione base del documento (generalmente 32px se la base standard è 16px) */
+  font-size: 2rem;
+
+
+/* Altezza della riga (interlinea). Un valore di 1.2 mantiene le righe del titolo compatte */
+  line-height: 1.2;
+
+}
+
+
+p {
+
+  color: rgb(46, 45, 45);
+
+  font-size: 1rem;
+
+  line-height: 1.6;
+
+}
+
+.DSK {
+
+  width: 200px;
+
+  height: 100px;
+
+  background-color: rgb(49, 39, 139);
+
+}
+
+.ProvaPadding {
+
+  padding: 20px;
+
+  background-color: rgb(11, 233, 11);
+
+}
+
+.ProvaBorder {
+
+  border: 5px solid rgb(245, 4, 4);
+
+}
+
+.ProvaMargin {
+
+  margin: 30px;
+
+}
