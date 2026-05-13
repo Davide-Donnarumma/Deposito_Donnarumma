@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Pratica_pome_13css.css">
+    </head>
+    
+    <body>
+<!--Il contenitore ha position: relative, quindi diventa il riferimento per gli elementi figli posizionati in modo assoluto-->
+        <div class="contenitore">Div Esterno</div>
+
+<!-- Elemento testuale singolo, a cui è associata la classe "box" -->
+  <div class="box">Div esterno (Dentro)</div>
+</div>
+<br>
+ <!-- Contenitore principale della griglia. Il CSS applicherà qui il 'display: grid' -->   
+<div class="container">
+
+<!-- Riquadri delle griglie, corrispondente alle regole CSS per .item1,2,3 -->
+  <div class="item1">1</div>
+
+  <div class="item1">2</div>
+
+  <div class="item1">3</div>
+
+</div>
+<br>
+
+<!-- Contenitore Flexbox: dispone gli elementi in riga o in colonna -->
+<div class="container_Flex">
+
+  <div class="item4">4</div>
+
+  <div class="item4">4</div>
+
+  <div class="item4">4</div>
+
+</div>
+<br>
+
+<!-- Contenitore Grid: dispone gli elementi su una griglia bidimensionale -->
+<div class="container_Griglia">
+
+<!-- L'elemento A si estende su più colonne (definito da .item5) -->
+  <div class="item item5">A</div>
+
+<!-- L'elemento B si estende su più righe (definito da .item6) -->
+  <div class="item item6">B</div>
+
+<!-- L'elemento C si posiziona automaticamente nel primo spazio disponibile -->
+  <div class="item">C</div>
+
+</div>
+<br>
+
+<!-- Contenitore Grid Areas: definisce il layout tramite aree semantiche -->
+<div class="container_Aria">
+
+  <div class="header">Header</div> <!-- Intestazione superiore -->
+
+  <div class="sidebar">Sidebar</div> <!-- Barra laterale di navigazione -->
+
+  <div class="content">Content</div> <!-- Area del contenuto principale -->
+
+  <div class="footer">Footer</div> <!-- Piè di pagina inferiore -->
+
+</div>
+
+    </body>
+</html>
+
