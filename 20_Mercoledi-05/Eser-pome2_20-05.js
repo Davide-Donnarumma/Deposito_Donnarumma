@@ -23,7 +23,7 @@ async function caricaDatiUtente() {
     outputArea.textContent = "Caricamento in corso...";
     outputArea.classList.remove("success"); 
     outputArea.classList.add("loading");
-    
+
     try {
         let risultato = await simulaRichiestaServer();
         //dati ottenuti
@@ -38,6 +38,6 @@ async function caricaDatiUtente() {
 }
 
 btnCarica.addEventListener("click", function() {
-    // Richiamo della funzione esterna
+    //richiamo della funzione esterna
     caricaDatiUtente();
 });

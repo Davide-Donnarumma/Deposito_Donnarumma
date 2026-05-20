@@ -11,7 +11,7 @@ button {
     margin-bottom: 20px;
 }
 
-/*Stile base dell'area di output */
+/*stile base dell'area di output */
 #outputArea {
     padding: 15px;
     border: 2px solid #ccc;
@@ -21,7 +21,7 @@ button {
     transition: all 0.3s ease;
 }
 
-/*Classe che JavaScript aggiunge durante l'attesa */
+/*classe che JS aggiunge durante l'attesa */
 .loading {
     background-color: #F1C40F;
     color: #333;
@@ -29,7 +29,7 @@ button {
     border-color: #D4AC0D;
 }
 
-/*Classe che JavaScript aggiunge al termine dell'operazione */
+/*classe che JS aggiunge al termine dell'operazione */
 .success {
     background-color: #2ECC71;
     color: white;
