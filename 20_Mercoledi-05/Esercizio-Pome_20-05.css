@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+#titoloPrincipale {
+    transition: color 0.4s ease-in-out;
+    /* Cambio puntatore mouse al passaggio sopra il titolo h1 */
+    cursor: pointer; 
+}
+
+#box {
+    transition: color 0.4s ease-in-out;
+    /* Cambio puntatore mouse al passaggio sopra il titolo h1 */
+    cursor: pointer; 
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+    display: block;
+    width: 250px;
+}
+
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(173, 216, 230);
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+    line-height: 200px;
+    margin-bottom: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+button {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
