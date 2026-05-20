@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    line-height: 1.6;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/*Stile base dell'area di output */
+#outputArea {
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/*Classe che JavaScript aggiunge durante l'attesa */
+.loading {
+    background-color: #F1C40F;
+    color: #333;
+    font-style: italic;
+    border-color: #D4AC0D;
+}
+
+/*Classe che JavaScript aggiunge al termine dell'operazione */
+.success {
+    background-color: #2ECC71;
+    color: white;
+    font-weight: bold;
+    border-color: #27AE60;
+}

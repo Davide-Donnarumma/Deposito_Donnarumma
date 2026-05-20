@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+#output {
+    padding: 10px;
+    border: 1px solid black;
+}
