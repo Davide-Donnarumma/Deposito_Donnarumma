@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Zoo Interattivo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Esercizio_21-05.css">
+</head>
+<body>
+    <header>
+        <h1 id="titoloZoo">Il mio Zoo ☀️</h1>
+    </Header>
+        
+<main>
+    <p class="testo-introduttivo">Benvenuto nel mio Zoo. Utilizza i comandi sottostanti per modificare la lista degli animali presenti nello Zoo.</p>
+
+    <div class="area-pulsanti">
+        <button class="btn-azione btn-AggAnimali" data-nome="Leone" data-emoji="🦁">Leone 🦁</button>
+        <button class="btn-azione btn-AggAnimali" data-nome="Elefante" data-emoji="🐘">Elefante 🐘</button>
+        <button class="btn-azione btn-AggAnimali" data-nome="Giraffa" data-emoji="🦒">Giraffa 🦒</button>
+        <button class="btn-azione btn-AggAnimali" data-nome="Pinguino" data-emoji="🐧">Pinguino 🐧</button>
+        <button class="btn-azione btn-AggAnimali" data-nome="Scimmia" data-emoji="🐒">Scimmia 🐒</button>
+        <button id="btnRimuovi" class="btn-azione btn-pericolo">Rimuovi Ultimo Animale</button>
+        <button id="btnTema" class="btn-azione btn-speciale">Cambia Tema dello Zoo</button>
+    </div>
+
+    <div id="contenitoreLista">
+        <ul id="listaAnimali" class="lista-animali">
+            </ul>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 - Il mio Zoo</p>
+</footer>
+
+    <script src="Esercizio_21-05.js"></script>
+</body>
+</html>

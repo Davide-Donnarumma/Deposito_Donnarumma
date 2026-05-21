@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Libreria digitale</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Esercizio-2_21-05.css">
+    </head>
+    <body>
+
+        <header class="header">
+            <h1 id="titoloLibreria">Libreria digitale</h1>
+
+            <button id="btnMenu" class="btn-menu">☰</button>
+
+            <nav id="menuNav" class="menu">
+                <a href="#">Catalogo</a>
+                <a href="#">Nuovi Arrivi</a>
+                <a href="#">Eventi</a>
+                <a href="#">Contatti</a>
+            </nav>
+        </header>
+
+        <main class="contenitore-principale">
+            <p class="testo-intro">
+                Benvenuto nella Libreira digitale. Inserisci i dati del libro nel modulo sottostante.
+            </p>
+
+            <form id="formLibro" class="modulo-inserimento">
+                <label for="titolo">Titolo del libro:</label>
+                <input type="text" id="titolo" required>
+
+                <label for="autore">Autore:</label>
+                <input type="text" id="autore" required>
+
+                <label for="genere">Genere letterario:</label>
+                <input type="text" id="genere" required>
+
+                <label for="anno">Anno di pubblicazione:</label>
+                <input type="number" id="anno" required>
+
+                <label for="descrizione">Breve descrizione:</label>
+                <textarea id="descrizione" rows="3" required></textarea>
+
+                <button type="submit" class="btn-aggiungi">Registra Libro</button>
+            </form>
+
+            <section id="contenitoreLibri" class="griglia-libri">
+                </section>
+
+        </main>
+
+
+
+
+        <script src="Esercizio-2_21-05.js"></script>
+    </body>
+</html>

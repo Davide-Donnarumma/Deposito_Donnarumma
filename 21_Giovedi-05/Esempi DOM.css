@@ -1,0 +1,40 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    padding: 30px;
+
+    background-color: #f0f0f0;
+
+}
+
+
+h1 {
+
+    color: darkblue;
+
+}
+
+
+.descrizione {
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+
+button {
+
+    padding: 10px 20px;
+
+    background-color: darkblue;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+}

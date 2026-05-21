@@ -1,0 +1,135 @@
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+
+}
+
+
+.header {
+
+    background-color: darkgreen;
+
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.menu {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+.menu a {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+.menu-button {
+
+    display: none;
+
+    font-size: 28px;
+
+    background: none;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+.container {
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 20px;
+
+}
+
+
+.card {
+
+    background-color: white;
+
+    padding: 20px;
+
+    flex: 1;
+
+    border-radius: 8px;
+
+}
+
+
+/* Regole responsive per schermi piccoli */
+
+@media screen and (max-width: 768px) {
+
+
+    .header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .menu-button {
+
+        display: block;
+
+    }
+
+
+    .menu {
+
+        display: none;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        margin-top: 15px;
+
+    }
+
+
+    .menu.active {
+
+        display: flex;
+
+    }
+
+
+    .container {
+
+        flex-direction: column;
+
+    }
+
+}

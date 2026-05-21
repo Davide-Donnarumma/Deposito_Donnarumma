@@ -1,0 +1,43 @@
+/**/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: #FDF6E3;
+    color: #3E2723;
+}
+
+/*Header e menu*/
+.header {
+    background-color: #5D4037;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 { margin: 0; font-size: 24px; }
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover { text-decoration: underline; }
+
+.btn-menu {
+    display: none;
+    font-size: 28px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/*Contenuto principale da iniziare form, card libro, Design cell

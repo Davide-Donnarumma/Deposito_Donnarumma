@@ -1,0 +1,3 @@
+const btnMenu = document.getElementById("btnMenu");
+const menuNav = document.getElementById("menuNav");
+// da finire menu, gestione form agg libro, ecc...
