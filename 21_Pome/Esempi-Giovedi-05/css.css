@@ -1,0 +1,36 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    padding: 30px;
+
+    background-color: #f4f4f4;
+
+}
+
+
+nav {
+
+    margin-bottom: 20px;
+
+}
+
+
+nav a {
+
+    margin-right: 15px;
+
+    text-decoration: none;
+
+    color: darkgreen;
+
+    font-weight: bold;
+
+}
+
+
+nav a:hover {
+
+    color: orange;
+
+}
