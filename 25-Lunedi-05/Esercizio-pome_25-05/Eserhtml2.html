@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Elenco</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Esercss.css">
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Elenco Giocattoli</h1>
+            <p>Visualizzazione dei prodotti archiviati in formato JSON</p>
+        </header>
+
+        <nav>
+            <a href="Eserhtml1.html" class="active">Nuovo Giocattolo</a>
+            <a href="Eserhtml2.html" class="active">Vedi Elenco</a>
+            <a href="Eserhtml3.html">Riepilogo Statistiche</a>
+        </nav>
+
+        <div id="azioniElenco" class="list-actions">
+            <button id="btnScaricaJSON" class="btn-accent">Scarica Elenco JSON</button>
+            <button id="btnCancellaTutto" class="btn-danger">Svuota Archivio</button>
+        </div>
+
+        <section class="card" id="elencoContainer">
+            </section>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>    

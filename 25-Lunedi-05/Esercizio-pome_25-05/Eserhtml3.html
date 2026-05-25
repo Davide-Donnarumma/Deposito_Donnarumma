@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Riepilogo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Esercss.css">
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard Analitica</h1>
+            <p>Elaborazione dati dell'inventario</p>
+        </header>
+
+        <nav>
+            <a href="Eserhtml1.html">Nuovo Giocattolo</a>
+            <a href="Eserhtml2.html">Vedi Elenco</a>
+            <a href="Eserhtml3.html" class="active">Riepilogo Statistiche</a>
+        </nav>
+
+        <div class="stat-box">
+            <div class="stat-card">
+                <p>Totale Prodotti</p>
+                <h2 id="totaleGiocattoli">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Prezzo Medio</p>
+                <h2 id="prezzoMedio">€0.00</h2>
+            </div>
+        </div>
+
+        <section class="card">
+            <h2>Categorie Attive</h2>
+            <p id="listaCategorie" style="margin-top: 10px; line-height: 1.6; font-style: italic;"></p>
+        </section>
+
+        <section class="card">
+            <h2>Prodotti Non Disponibili (Esauriti)</h2>
+            <ul id="listaEsauriti" style="margin-top: 15px; margin-left: 20px; line-height: 1.8;">
+                </ul>
+        </section>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>    

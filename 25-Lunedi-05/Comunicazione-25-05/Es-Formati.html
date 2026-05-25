@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Generatore formati dati</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Generatore JSON, CSV e XML</h1>
+
+    <button onclick="generaJSON()">Genera JSON</button>
+    <button onclick="generaCSV()">Genera CSV</button>
+    <button onclick="generaXML()">Genera XML</button>
+
+    <pre id="risultato"></pre>
+
+    <script>
+        const prodotto = {
+            nome: "Mouse Gaming",
+            categoria: "Accessori",
+            prezzo: 29.99
+        };
+
+        function generaJSON() {
+            const json = JSON.stringify(prodotto, null, 2);
+            document.getElementById("risultato").innerText = json;
+        }
+
+        function generaCSV() {
+            const csv =
+                "nome,categoria,prezzo\n" +
+                prodotto.nome + "," +
+                prodotto.categoria + "," +
+                prodotto.prezzo;
+
+            document.getElementById("risultato").innerText = csv;
+        }
+
+        function generaXML() {
+            const xml =
+                "<prodotto>\n" +
+                "  <nome>" + prodotto.nome + "</nome>\n" +
+                "  <categoria>" + prodotto.categoria + "</categoria>\n" +
+                "  <prezzo>" + prodotto.prezzo + "</prezzo>\n" +
+                "</prodotto>";
+
+            document.getElementById("risultato").innerText = xml;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generatore e Download File</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Generatore JSON, CSV e XML</h1>
+
+    <button onclick="generaJSON()">
+        Genera JSON
+    </button>
+
+    <button onclick="generaCSV()">
+        Genera CSV
+    </button>
+
+    <button onclick="generaXML()">
+        Genera XML
+    </button>
+
+    <pre id="risultato"></pre>
+
+    <script>
+
+        // Oggetto JavaScript
+        const prodotto = {
+            nome: "Mouse Gaming",
+            categoria: "Accessori",
+            prezzo: 29.99
+        };
+
+        // Elemento risultato
+        const risultato = document.getElementById("risultato");
+
+        // -----------------------------
+        // Funzione download file
+        // -----------------------------
+        function scaricaFile(contenuto, nomeFile, tipo) {
+
+            // Creazione Blob
+            const file = new Blob(
+                [contenuto],
+                { type: tipo }
+            );
+
+            // Creazione URL temporaneo
+            const url = URL.createObjectURL(file);
+
+            // Creazione link download
+            const a = document.createElement("a");
+
+            a.href = url;
+            a.download = nomeFile;
+
+            // Simulazione click
+            a.click();
+
+            // Rimozione URL
+            URL.revokeObjectURL(url);
+        }
+
+        // -----------------------------
+        // JSON
+        // -----------------------------
+        function generaJSON() {
+
+            const json =
+                JSON.stringify(prodotto, null, 2);
+
+            risultato.innerText = json;
+
+            scaricaFile(
+                json,
+                "prodotto.json", // nella realtà qui c'è una variabile +".json"
+                "application/json"
+            );
+        }
+
+        // -----------------------------
+        // CSV
+        // -----------------------------
+        function generaCSV() {
+
+            const csv =
+                "nome,categoria,prezzo\n" +
+                prodotto.nome + "," +
+                prodotto.categoria + "," +
+                prodotto.prezzo;
+
+            risultato.innerText = csv;
+
+            scaricaFile(
+                csv,
+                "prodotto.csv",// nella realtà qui c'è una variabile +".csv"
+                "text/csv"
+            );
+        }
+
+        // -----------------------------
+        // XML
+        // -----------------------------
+        function generaXML() {
+
+            const xml =
+                "<prodotto>\n" +
+                "   <nome>" + prodotto.nome + "</nome>\n" +
+                "   <categoria>" + prodotto.categoria + "</categoria>\n" +
+                "   <prezzo>" + prodotto.prezzo + "</prezzo>\n" +
+                "</prodotto>";
+
+            risultato.innerText = xml;
+
+            scaricaFile(
+                xml,
+                "prodotto.xml",   // nella realtà qui c'è una variabile +".xml"
+                "application/xml"
+            );
+        }
+
+    </script>
+
+</body>
+</html>
