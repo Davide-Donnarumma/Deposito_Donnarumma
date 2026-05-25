@@ -1,0 +1,225 @@
+/* Variabili e Reset */
+:root {
+    --primary: #00f2ff;
+    --accent: #7000ff;
+    --bg: #f0f2f5;
+    --text: #1a1a1a;
+    --card: #ffffff;
+}
+
+/* Variabili per la Dark Mode */
+body.dark {
+    --bg: #0b0e14;
+    --text: #ffffff;
+    --card: #161b22;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--bg); 
+    color: var(--text); 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/*HEADER E FOOTER*/
+.main-header { 
+    background: #000; 
+    padding: 20px 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 2px solid var(--primary);
+}
+
+.logo { 
+    font-family: 'Orbitron', sans-serif; 
+    font-weight: bold; 
+    color: #fff; 
+    font-size: 24px; 
+}
+
+.logo span { 
+    color: var(--primary); 
+}
+
+nav a { 
+    color: #fff; 
+    text-decoration: none; 
+    margin-left: 20px; 
+    font-size: 14px; 
+    text-transform: uppercase; 
+}
+
+.main-footer { 
+    background: #000; 
+    color: #666; 
+    text-align: center; 
+    padding: 40px 0; 
+}
+
+.footer-bar { 
+    height: 2px; 
+    background: var(--accent); 
+    width: 50px; 
+    margin: 0 auto 20px; 
+}
+
+.social-icons {
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 10px;
+}
+
+/*SEZIONE HERO*/
+.hero { 
+    height: 60vh; 
+    position: relative;
+    overflow: hidden; 
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1;
+}
+
+.hero-overlay { 
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.hero-content h1 { 
+    font-family: 'Orbitron', sans-serif; 
+    color: #fff; 
+    font-size: clamp(24px, 5vw, 42px); 
+    margin-bottom: 15px; 
+}
+
+.hero-content p { 
+    color: #ccc; 
+    margin-bottom: 25px; 
+}
+
+/*LAYOUT CENTRALE E CARD*/
+.container { 
+    max-width: 800px; 
+    margin: -50px auto 50px; 
+    padding: 0 20px; 
+    position: relative; 
+    z-index: 10; 
+}
+
+.card { 
+    background: var(--card); 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+    margin-bottom: 30px; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-top: 15px; 
+    font-weight: 600; 
+    font-size: 14px; 
+}
+
+input, select { 
+    width: 100%; 
+    padding: 12px; 
+    margin-top: 8px; 
+    border: 1px solid #444; 
+    border-radius: 8px; 
+    background: transparent; 
+    color: var(--text); 
+}
+
+/*BOTTONI*/
+.btn-hero, .btn-save { 
+    background: linear-gradient(90deg, var(--accent), var(--primary)); 
+    border: none; 
+    padding: 15px 30px; 
+    color: #fff; 
+    font-weight: bold; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    text-transform: uppercase;
+}
+
+.btn-clear { 
+    background: transparent; 
+    border: 1px solid #ff4b2b; 
+    color: #ff4b2b; 
+    padding: 10px 20px; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    font-weight: bold;
+}
+
+.btn-clear:hover { 
+    background: #ff4b2b; 
+    color: #fff; 
+}
+
+.actions { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 30px; 
+}
+
+/*PROFILO SALVATO*/
+.profile-display { 
+    border-left: 5px solid var(--primary); 
+}
+
+.profile-display p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.badge { 
+    background: var(--primary); 
+    color: #000; 
+    display: inline-block; 
+    padding: 5px 12px; 
+    border-radius: 5px; 
+    font-size: 12px; 
+    font-weight: bold; 
+    margin-bottom: 15px; 
+}
+
+.nascosto { 
+    display: none; 
+}
+
+/*RESPONSIVE DESIGN*/
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn-save, .btn-clear {
+        width: 100%;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Esercizio.css">
+    </head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">PRO<span>GAMER</span></div>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Classifiche</a>
+            <a href="#">Supporto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img class="hero-bg-img" src="img/sfondo-gaming.jpg" alt="Sfondo Gaming">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Salva le tue preferenze da Videogiocatore</h1>
+                <p>Personalizza e salva le tue preferenze di gioco direttamente nel browser.</p>
+                <button id="temaButton" class="btn-hero">Cambia Tema</button>
+            </div>
+        </div>
+    </section>
+
+       <main class="container">
+        
+        <section class="card">
+            <h2>Configura Profilo</h2>
+            <div class="form-group">
+                <label>Nickname:</label>
+                <input type="text" id="inputNome" placeholder="Esempio: DSK---">
+                
+                <label>Gioco Preferito:</label>
+                <input type="text" id="inputGioco" placeholder="Esempio: Rainbow six">
+                
+                <label>Piattaforma:</label>
+                <select id="inputPiattaforma">
+                    <option value="PC">PC</option>
+                    <option value="PlayStation 5">PlayStation 5</option>
+                    <option value="Xbox Series X">Xbox Series X</option>
+                    <option value="Nintendo Switch">Nintendo Switch</option>
+                </select>
+            </div>
+            <div class="actions">
+                <button id="btnSalva" class="btn-save">Salva Preferenze</button>
+                <button id="btnCancella" class="btn-clear">Resetta</button>
+            </div>
+        </section>
+
+        <section id="profiloContainer" class="card profile-display nascosto">
+            <div class="badge">Dati Salvati</div>
+            <p id="outputNome"></p>
+            <p id="outputGioco"></p>
+            <p id="outputPiattaforma"></p>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-bar"></div>
+        <p>&copy; 2026 DSK| Gamer Dashboard Project</p>
+        <div class="social-icons">🎮 🕹️ 🎧</div>
+    </footer>
+
+    <script src="Esercizio.js"></script>
+</body>
+</html>
