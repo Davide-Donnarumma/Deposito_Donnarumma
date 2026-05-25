@@ -9,17 +9,24 @@
         <link rel="stylesheet" href="Esercss.css">
     </head>
 <body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Toy<span>Store</span></div>
+            <nav class="navbar">
+                <a href="Eserhtml1.html">Nuovo Giocattolo</a>
+                <a href="Eserhtml2.html" class="active">Vedi Elenco</a>
+                <a href="Eserhtml3.html">Riepilogo Statistiche</a>
+                <a href="profilo.html">Chi Sono</a>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        <header>
+        <div class="titolo-sezione">
             <h1>Elenco Giocattoli</h1>
             <p>Visualizzazione dei prodotti archiviati in formato JSON</p>
-        </header>
-
-        <nav>
-            <a href="Eserhtml1.html" class="active">Nuovo Giocattolo</a>
-            <a href="Eserhtml2.html" class="active">Vedi Elenco</a>
-            <a href="Eserhtml3.html">Riepilogo Statistiche</a>
-        </nav>
+        </div>
 
         <div id="azioniElenco" class="list-actions">
             <button id="btnScaricaJSON" class="btn-accent">Scarica Elenco JSON</button>
@@ -30,6 +37,14 @@
             </section>
     </div>
 
+    <footer>
+        <div class="footer-content">
+            <h3>Toy Store</h3>
+            <p>&copy; 2026 DSK - Creato con Passione per i Giocattoli</p>
+            <div class="footer-social">🧸 🎮 🎠</div>
+        </div>
+    </footer>
+
     <script src="script.js" defer></script>
 </body>
-</html>    
+</html> 

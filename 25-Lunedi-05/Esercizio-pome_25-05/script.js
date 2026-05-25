@@ -1,3 +1,22 @@
+//Funzione globale per generare e mostrare il Toast
+function mostraToast(messaggio) {
+    let toast = document.getElementById("toastMsg");
+
+    if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "toastMsg";
+        toast.className = "toast-notifica";
+        document.body.appendChild(toast);
+    }
+
+    toast.innerText = messaggio;
+    toast.classList.add("mostra");
+
+    setTimeout(function() {
+        toast.classList.remove("mostra");
+    }, 3000);
+}
+
 //sezione logica pagina inserimento
 
 const formInserimento = document.getElementById("toyForm");
@@ -28,7 +47,7 @@ if (formInserimento) {
         //Trasformazione in formato JSON e salvataggio nel LocalStorage
         localStorage.setItem("giocattoli", JSON.stringify(listaGiocattoli));
 
-        alert("Dati del giocattolo trasformati correttamente in JSON e salvati in memoria.");
+        mostraToast("Giocattolo salvato con successo nel catalogo!");
         formInserimento.reset();
     });
 }
