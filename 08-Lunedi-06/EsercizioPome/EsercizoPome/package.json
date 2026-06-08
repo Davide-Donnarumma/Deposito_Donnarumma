@@ -1,5 +1,5 @@
 {
-  "name": "eserciziopome01",
+  "name": "esercizopome",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mantine/core": "^9.3.0",
+    "@mantine/form": "^9.3.0",
+    "@mantine/hooks": "^9.3.0",
     "axios": "^1.17.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "react-hook-form": "^7.77.0",
     "react-router-dom": "^7.17.0",
     "zustand": "^5.0.14"
   },

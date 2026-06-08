@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  background-color: #0d0e15;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cyber-navbar {
+  background-color: #1a1c29;
+  padding: 20px 40px;
+  border-bottom: 2px solid #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+.nav-logo {
+  color: #00ffcc;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.cyber-card {
+  background-color: #151822 !important;
+  border: 1px solid #2b3040 !important;
+  transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+  border-color: #00ffcc !important;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.3) !important;
+  transform: translateY(-5px);
+}
+
+.cyber-form {
+  background-color: #12141d !important;
+  border: 1px solid #00ffcc !important;
+}
+
+.cyber-btn {
+  letter-spacing: 2px;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+}
+
+.glitch-title {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 0px #ff0055, -2px -2px 0px #00ffcc;
+}
+
+input, textarea {
+  background-color: #0d0e15 !important;
+  color: #00ffcc !important;
+  border: 1px solid #2b3040 !important;
+}
+input:focus, textarea:focus {
+  border-color: #00ffcc !important;
+}
