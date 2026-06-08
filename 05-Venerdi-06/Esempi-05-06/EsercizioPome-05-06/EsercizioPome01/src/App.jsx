@@ -1,28 +1,27 @@
-import "./App.css";
-import { NavLink, Route, Routes } from "react-router-dom";
-import { ListaPost } from "./components/ListaPost";
-import { DettaglioPost } from "./components/DettaglioPost";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import ListaCitta from "./pages/ListaCitta";
+import DettaglioMeteo from "./pages/DettaglioMeteo";
 
-function App() {
-  const visualizzaStileAttivo = ({ isActive }) => ({
-    color: isActive ? "gold" : "white",
-    fontWeight: isActive ? "bold" : "normal",
-  });
-
+export default function App() {
   return (
-    <div>
-      <nav>
-        <NavLink to="/" style={visualizzaStileAttivo}>
-          Home
-        </NavLink>
-      </nav>
+    <div className="app-container">
+      <Navbar />
 
-      <Routes>
-        <Route path="/" element={<ListaPost />} />
-        <Route path="/posts/:id" element={<DettaglioPost />} />
-      </Routes>
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<ListaCitta />} />
+          <Route path="/meteo/:nomeCitta" element={<DettaglioMeteo />} />
+          <Route
+            path="*"
+            element={
+              <h2 style={{ color: "#ff003c" }}>
+                GAME OVER - Pagina non trovata
+              </h2>
+            }
+          />
+        </Routes>
+      </main>
     </div>
   );
 }
-
-export default App;
