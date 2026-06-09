@@ -1,0 +1,23 @@
+<div class="card">
+  <div>
+    <label for="nameInput">Modifica nome in tempo reale: </label>
+    <input id="nameInput" type="text" [(ngModel)]="name" />
+  </div>
+
+  <hr>
+
+  <h2>{{ name }}</h2>
+  <p><strong>Brand:</strong> {{ brand }}</p>
+  <p><strong>Prezzo Finale:</strong> {{ finalPrice() }} €</p>
+  <p><strong>Tags:</strong> {{ tags.join(', ') }}</p>
+  <p><strong>Disponibilità:</strong> {{ available ? 'Disponibile' : 'Esaurito'
+    }}</p>
+
+  <div>
+    <img [src]="imageUrl" alt="Immagine di {{ name }}" />
+  </div>
+
+  <button (click)="compra()" [disabled]="!available">
+    Acquista
+  </button>
+</div>

@@ -1,0 +1,22 @@
+<h1>Data Binding Examples</h1>
+
+<!-- Interpolation -->
+<h2>Interpolation</h2>
+<p>il nome dell'utente è {{num}}</p>
+
+<!-- Property Binding -->
+<h2>Property Binding</h2>
+<img [src]="imageUrl" [width]="imageWidth" [height]="imageHeight">
+
+<!-- Event Binding -->
+<h2>Event Binding</h2>
+<button (click)="saluta()">Saluta</button>
+<p>Indice corrente = {{index}}</p>
+<p>il messaggio è {{currentMsg}}</p>
+
+<!-- Two-Way Binding -->
+<h2>Two-Way Binding</h2>
+<input [(ngModel)]="username" placeholder="Inserisci nome utente">
+<p>Il nome dell'utente è {{username}}</p>
+
+<button (click)="resetUsername()">Resetta Username</button>
