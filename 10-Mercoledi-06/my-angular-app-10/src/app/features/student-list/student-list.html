@@ -1,0 +1,51 @@
+<h1>Esercizio Directives - Studenti</h1>
+
+<h2>@IF</h2>
+
+<button (click)="isVisible = !isVisible">Toggle Lista</button>
+<p appHighlight>La lista è visibile? {{ isVisible }}</p>
+
+@if(students.length == 0) {
+<p style="color: red; font-weight: bold;">Nessuno studente disponibile</p>
+}
+@else if (!isVisible) {
+<p style="color: gray;">La lista è nascosta, clicca sul pulsante per farla
+  apparire.</p>
+}
+@else {
+<p style="color: green;">Il registro contiene {{ students.length }}
+  studenti.</p>
+}
+
+<h2>@FOR, @SWITCH e @IF</h2>
+
+@if(isVisible && students.length > 0) {
+<ul>
+  @for(student of students; track student.name; let i = $index) {
+  <li style="margin-bottom: 8px;">
+    {{ i + 1 }} - <strong>{{ student.name }}</strong>
+
+    @if(!student.present) {
+    <span style="color: gray; font-style: italic;"> (assente)</span>
+    }
+
+    &rarr;
+
+    @switch (getGradeCategory(student.grade)) {
+    @case ('Ottimo') {
+    <span style="color: darkgreen; font-weight: bold;">Ottimo</span>
+    }
+    @case ('Buono') {
+    <span style="color: green;">Buono</span>
+    }
+    @case ('Sufficiente') {
+    <span style="color: orange;">Sufficiente</span>
+    }
+    @default {
+    <span style="color: red; font-weight: bold;">Insufficiente</span>
+    }
+    }
+  </li>
+  }
+</ul>
+}

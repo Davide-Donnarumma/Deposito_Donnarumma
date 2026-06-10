@@ -1,0 +1,112 @@
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #f4f6fb;
+  margin: 0;
+  padding: 40px;
+  color: #1f2937;
+}
+
+/* Contenitore principale */
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Titolo */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* Form */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* input + select */
+input,
+select {
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* bottone generale */
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+/* bottone aggiungi */
+form button {
+  background: #6366f1;
+  color: white;
+}
+
+form button:hover {
+  background: #4f46e5;
+}
+
+/* lista */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* task item */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+li:hover {
+  transform: translateY(-2px);
+}
+
+/* testo task */
+li span {
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* bottone elimina */
+li button {
+  background: #ef4444;
+  color: white;
+}
+
+li button:hover {
+  background: #dc2626;
+}
+
+/* checkbox più “pulita” */
+input[type="checkbox"] {
+  transform: scale(1.2);
+}

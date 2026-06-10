@@ -1,0 +1,126 @@
+# Quiz di Verifica: Fondamenti di React & Vite 
+## Sezione 1: Vite & L'Ambiente di Sviluppo
+
+### Domanda 1
+
+Che cos'è **Vite** e per quale motivo lo si usa al posto di strumenti più vecchi (come Create React App) per creare un'applicazione React? Spiega brevemente come si avvia un nuovo progetto e come si lancia in esecuzione locale.
+
+Risposta: Vite è uno strumento di sviluppo moderno, estremamente veloce rispetto a Create React App perché sfrutta i moduli ESM nativi del browser e non deve ricompilare l'intero pacchetto a ogni modifica.
+Si esegue nel terminale il comando npm create vite@latest nome-progetto template react
+Si entra nella cartella con cd nome-progetto, si installano le dipendenze con npm install e si avvia il server locale con npm run dev
+
+### Domanda 2
+
+Quando crei un progetto React con Vite, noti che i file hanno l'estensione `.jsx` anziché `.js`. Che cos'è **JSX** e qual è il suo scopo principale all'interno di React?
+
+Risposta: JSX ovvero JavaScript XML è un'estensione della sintassi di JavaScript che permette di scrivere codice simile a HTML direttamente dentro i file JavaScript
+Il suo scopo principale è rendere più intuitiva, visiva e leggibile la creazione dell'interfaccia utente, combinando la logica di programmazione con la struttura della pagina
+
+## Sezione 2: Architettura e Filosofia di React
+
+### Domanda 3
+
+Per quale motivo un'azienda o uno sviluppatore dovrebbe scegliere di usare **React** per costruire un'applicazione web rispetto al classico sviluppo con HTML, CSS e JavaScript nativo? Qual è il vantaggio principale della filosofia "a componenti"?
+
+Risposta: Si sceglie React perché permette di creare interfacce utente dinamiche e complesse in modo dichiarativo e scalabile. Il vantaggio principale della filosofia a componenti è il riutilizzo del codice e la manutenibilità
+
+### Domanda 4
+
+Cosa sono le **Props** in React e come vengono utilizzate per far comunicare due componenti tra loro? Specifica in quale direzione viaggiano i dati (es. da padre a figlio o viceversa).
+
+Risposta: Le Props sono oggetti di configurazione che permettono di passare dati da un componente all'altro
+I dati vanno esclusivamente in una direzione unidirezionale ovvero dal componente padre al componente figlio. Il figlio riceve le props come argomenti in modalità di sola lettura read-only
+
+---
+
+## Sezione 3: State Management & Hooks Base
+
+### Domanda 5
+
+A cosa serve l'Hook **`useState`**? Spiega la differenza cruciale tra il variare una normale variabile JavaScript (es. `let count = 0; count++`) e l'utilizzare la funzione di update dello stato di React.
+
+Risposta: L'Hook useState serve per creare una variabile di stato che react tiene traccia nel tempo
+La differenza è che modificare una variabile normale (let count = 0; count++) non notifica React, quindi la pagina non si aggiorna visivamente
+L'uso della funzione di update dello stato invece, comunica a React che il dato è cambiato, forzando il re-render del componente e aggiornando l'interfaccia utente.
+
+### Domanda 6
+
+Descrivi l'Hook **`useEffect`**. A cosa serve e in quali occasioni viene utilizzato? Spiega inoltre l'importanza del "vettore delle dipendenze" (dependency array) inserendo un esempio di cosa succede se lo lasci vuoto `[]`.
+
+Risposta: L'Hook useEffect serve a gestire gli side effects, come il recupero di dati da un'API
+Il vettore delle dipendenze dice a React quando eseguire l'effetto se viene lasciato vuoto "[]", l'effetto viene eseguito una sola volta subito dopo che il componente è stato montato sullo schermo per la prima volta
+
+---
+
+## Sezione 4: Rotte, API e Comunicazione Dati
+
+### Domanda 7
+
+Che cos'è **Axios** e perché lo si integra in un'applicazione React? In quale momento del ciclo di vita di un componente (o in combinazione con quale Hook) viene solitamente inserita una chiamata API per mostrare i dati all'avvio della pagina?
+
+Risposta: Axios è una libreria basata su Promise utilizzata per effettuare richieste HTTP (GET, POST, ecc...) verso un server o un'API esterna
+una chiamata API per mostrare i dati all'avvio viene solitamente inserita all'interno di un Hook useEffect con un array di dipendenze vuoto "[]", garantendo che il recupero dei dati avviene non appena il componente viene caricato
+
+### Domanda 8
+
+A cosa serve la libreria **React Router**? Spiega il concetto di Single Page Application (SPA) e come React Router permetta all'utente di navigare tra diverse "pagine" senza ricaricare il browser.
+
+Risposta: React Router è la libreria standard per la gestione della navigazione
+In una Single Page Application esiste un solo file HTML effettivo, React Router intercetta i clic sui link e aggiorna dinamicamente i componenti mostrati sullo schermo in base all'URL 
+modificando la cronologia del browser senza ricaricare la pagina e offrendo un'esperienza fluida da applicazione desktop
+
+---
+
+## Sezione 5: Gestione dello Stato Avanzata
+
+### Domanda 9
+
+Cosa si intende con il termine **"Props Drilling"**? Spiega perché può diventare un problema nei progetti che crescono di dimensione e descrivi brevemente lo scenario in cui si verifica.
+
+Risposta: Il Props Drilling è il processo dove si passano le Props attraverso molteplici livelli di componenti annidati da padre a figlio, poi a nipote, e così via solo per far raggiungere un componente fliglio messo molto in basso nella gerarchia, anche se i componenti intermedi non hanno bisogno di quei dati
+
+### Domanda 10
+
+Che cos'è **Zustand** e in che modo risolve il problema del *Props Drilling* accennato nella domanda precedente? Qual è il suo vantaggio principale in termini di semplicità rispetto ad altri sistemi di stato globale?
+
+Risposta: Zustand è una libreria di gestione dello stato globale leggera e minimale. 
+Risolve il Props Drilling creando uno store centralizzato esterno alla gerarchia dei componenti dove qualsiasi componente può accedere direttamente per leggere o modificare lo stato
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
