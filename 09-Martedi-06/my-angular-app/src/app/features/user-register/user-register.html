@@ -1,0 +1,68 @@
+<div>
+  <h2>Registrazione Utente</h2>
+
+  <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm.value)">
+
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        [(ngModel)]="user.nome"
+        #nomeModel="ngModel"
+        required
+        minlength="3" />
+
+      @if (nomeModel.invalid && nomeModel.touched) {
+      <p class="error-text">Il nome è obbligatorio (minimo 3 caratteri).</p>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="user.email"
+        #emailModel="ngModel"
+        required
+        email />
+
+      @if (emailModel.invalid && emailModel.touched) {
+      <p class="error-text">Inserire un indirizzo email valido.</p>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="eta">Età:</label>
+      <input
+        type="number"
+        id="eta"
+        name="eta"
+        [(ngModel)]="user.eta"
+        #etaModel="ngModel"
+        required
+        min="18" />
+
+      @if (etaModel.invalid && etaModel.touched) {
+      <p class="error-text">L'età è obbligatoria e devi essere maggiorenne
+        (minimo 18).</p>
+      }
+    </div>
+
+    <button type="submit" [disabled]="registerForm.invalid">
+      Registrati
+    </button>
+
+  </form>
+
+  @if (isRegistered) {
+  <div ngSkipHydration
+    style="margin-top: 20px; padding: 15px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 4px; font-weight: bold;">
+    L'utente è registrato: {{ user.nome }} | {{ user.email }} | età {{ user.eta }}
+    anni
+  </div>
+  }
+</div>

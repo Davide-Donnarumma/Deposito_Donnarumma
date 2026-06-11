@@ -1,0 +1,30 @@
+.contenitore-semaforo {
+  padding: 30px;
+  margin-bottom: 15px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  transition: background-color 0.3s ease;
+}
+
+.rosso {
+  background-color: #ff4c4c;
+  color: white;
+}
+
+.verde {
+  background-color: #4caf50;
+  color: white;
+}
+
+.giallo {
+  background-color: #ffeb3b;
+  color: black;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

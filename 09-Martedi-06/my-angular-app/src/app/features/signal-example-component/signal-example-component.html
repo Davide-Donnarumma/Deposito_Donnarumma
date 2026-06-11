@@ -1,0 +1,21 @@
+<p>signal-example-component works!</p>
+
+<h2> SIGNAL </h2>
+<p>contatore = {{counter()}}</p>
+<button (click)="increment()">+</button>
+<button (click)="decrement()">-</button>
+<button (click)="reset()">X</button>
+
+<input type="text" [value]="name()" (input)="updateName($event)" />
+
+<h2> COMPUTED </h2>
+<p>Double counter {{double()}}</p>
+<p>Saluto: {{saluto()}}</p>
+
+<h2> EFFECT </h2>
+
+<p>Log (ultimi 5 cambiamenti)</p>
+@for(riga of logRighe; track riga)
+{
+<div>{{riga}}</div>
+}

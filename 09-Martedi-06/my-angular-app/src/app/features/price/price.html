@@ -1,0 +1,17 @@
+<h2>Esercizio 2 — Calcolatore IVA con Computed</h2>
+
+<div class="card">
+  <p>Prezzo Netto: <strong>{{ prezzoNetto() }} €</strong></p>
+  <p>Aliquota IVA: <strong>{{ aliquotaIva() }}%</strong></p>
+  <hr>
+  <p><strong>PREZZO LORDO: {{ prezzoLordo() | number:'1.2-2' }} €</strong></p>
+</div>
+
+<div class="form-group">
+  <label for="netto">Inserisci Prezzo Netto:</label>
+  <input
+    id="netto"
+    type="number"
+    [value]="prezzoNetto()"
+    (input)="updatePrice($event)" />
+</div>
