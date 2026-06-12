@@ -8,9 +8,15 @@ import { ChildComponent } from '../child-component/child-component';
   styleUrl: './parent-component.css',
 })
 export class ParentComponent {
-  counter: number = 0;
+  // counter: number = 0;
 
-  onCounterChanged(newValue: number): void {
-    this.counter = newValue;
-  }
+  // onCounterChanged(newValue: number): void {
+  //   this.counter = newValue;
+  // }
+
+  prodotti = [
+    { nome: 'PC', prezzo: 1200, disponibile: true },
+    { nome: 'Mouse', prezzo: 180, disponibile: false },
+    { nome: 'Tastiera', prezzo: 279, disponibile: true },
+  ];
 }

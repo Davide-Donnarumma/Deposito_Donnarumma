@@ -1,4 +1,13 @@
 <p>child-component works!</p>
-<p>Counter (Child): {{childCounter}}</p>
+<!-- <p>Counter (Child): {{childCounter}}</p>
 <button (click)="increment()">Increment</button>
-<button (click)="decrement()">Decrement</button>
+<button (click)="decrement()">Decrement</button> -->
+
+<h3>{{ nome() }}</h3>
+<p>Prezzo: {{ prezzo() }} €</p>
+
+@if (disponibile()) {
+  <p style="color: green;">Disponibile</p>
+} @else {
+  <p style="color: red;">Esaurito</p>
+}

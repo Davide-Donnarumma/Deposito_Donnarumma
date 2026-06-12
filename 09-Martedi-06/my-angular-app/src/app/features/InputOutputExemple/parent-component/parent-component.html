@@ -1,5 +1,16 @@
 <p>parent-component works!</p>
-<p>Counter (Parent): {{counter}}</p>
+<!-- <p>Counter (Parent): {{counter}}</p>
 
 <app-child-component [childCounter]="counter"
-  (counterChange)="onCounterChanged($event)"></app-child-component>
+  (counterChange)="onCounterChanged($event)"></app-child-component> -->
+
+
+<h2>Lista Prodotti</h2>
+
+@for (prodotto of prodotti; track prodotto.nome) {
+  <app-child-component
+    [nome]="prodotto.nome"
+    [prezzo]="prodotto.prezzo"
+    [disponibile]="prodotto.disponibile">
+  </app-child-component>
+}

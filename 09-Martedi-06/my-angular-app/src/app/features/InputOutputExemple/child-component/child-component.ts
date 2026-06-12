@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, input} from '@angular/core';
 
 @Component({
   selector: 'app-child-component',
@@ -7,14 +7,18 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './child-component.css',
 })
 export class ChildComponent {
-  @Input() childCounter: number = 0;
-  @Output() counterChange: EventEmitter<number> = new EventEmitter<number>();
+  // @Input() childCounter: number = 0;
+  // @Output() counterChange: EventEmitter<number> = new EventEmitter<number>();
 
-  increment(): void {
-    this.counterChange.emit(++this.childCounter);
-  }
+  nome = input<string>();
+  prezzo = input<number>(0);
+  disponibile = input<boolean>();
 
-  decrement(): void {
-    this.counterChange.emit(--this.childCounter);
-  }
+  // increment(): void {
+  //   this.counterChange.emit(++this.childCounter);
+  // }
+
+  // decrement(): void {
+  //   this.counterChange.emit(--this.childCounter);
+  // }
 }

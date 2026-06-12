@@ -1,0 +1,11 @@
+<p>shopping-list-component works!</p>
+<div class="list-box">
+  @for (item of items(); track $index) {
+  <div class="list-item">
+    <span>{{ item }}</span>
+    <button class="btn-remove" (click)="onRemoveItem($index)">Rimuovi</button>
+  </div>
+  } @empty {
+  <p class="empty-text">Nessun elemento presente nella lista della spesa.</p>
+  }
+</div>

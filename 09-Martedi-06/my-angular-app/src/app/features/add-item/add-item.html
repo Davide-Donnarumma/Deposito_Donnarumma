@@ -1,0 +1,7 @@
+<p>add-item works!</p>
+
+<div class="add-box">
+  <input #itemInput type="text" placeholder="Cosa devi acquistare?..."
+    (keyup.enter)="onAddItem(itemInput)">
+  <button (click)="onAddItem(itemInput)">Aggiungi</button>
+</div>
