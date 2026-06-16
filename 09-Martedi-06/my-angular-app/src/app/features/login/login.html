@@ -1,0 +1,38 @@
+<p>login works!</p>
+<div class="auth-container">
+  <div class="auth-card">
+    <h2>Accesso al Sistema</h2>
+    <p>Inserire le credenziali per continuare.</p>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+      <div class="form-group">
+        <label>Username:</label>
+        <input formControlName="username" type="text" placeholder="es. admin" />
+        @if (loginForm.get('username')?.invalid &&
+        loginForm.get('username')?.touched) {
+        <span class="error-text">L'username è obbligatorio</span>
+        }
+      </div>
+
+      <div class="form-group">
+        <label>Password:</label>
+        <input formControlName="password" type="password"
+          placeholder="es. admin123" />
+        @if (loginForm.get('password')?.invalid &&
+        loginForm.get('password')?.touched) {
+        <span class="error-text">La password deve contenere almeno 6
+          caratteri</span>
+        }
+      </div>
+
+      @if (errorMessage()) {
+      <div class="alert-error">{{ errorMessage() }}</div>
+      }
+
+      <button type="submit" class="btn-primary"
+        [disabled]="loginForm.invalid">Accedi</button>
+
+    </form>
+  </div>
+</div>

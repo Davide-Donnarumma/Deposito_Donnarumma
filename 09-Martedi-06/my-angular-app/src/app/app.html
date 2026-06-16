@@ -8,7 +8,7 @@
 <!-- <app-traffic-light></app-traffic-light>
 <app-price></app-price> -->
 <!-- <app-parent-component></app-parent-component> -->
-
+<!--
 <div class="app-container">
   <header>
     <h1>Lista della Spesa</h1>
@@ -17,5 +17,19 @@
   <main>
     <app-add-item></app-add-item>
     <app-shopping-list></app-shopping-list>
+  </main>
+</div> -->
+
+<div class="app-layout">
+  <nav class="navigation-bar">
+    <span class="brand-title">Applicazione di Autenticazione</span>
+    <div class="nav-links">
+      <a routerLink="/login" routerLinkActive="active-route">Accedi</a>
+      <a routerLink="/dashboard" routerLinkActive="active-route">Dashboard</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
   </main>
 </div>

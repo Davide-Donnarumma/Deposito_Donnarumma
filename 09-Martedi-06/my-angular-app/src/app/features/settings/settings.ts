@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserPreferences } from '../../core/services/user-preferences';
+import { inject } from '@angular/core';
 
 @Component({
   selector: 'app-settings',
