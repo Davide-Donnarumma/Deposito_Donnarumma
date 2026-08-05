@@ -1,0 +1,10 @@
+supabase Video di riferimento =>https://www.youtube.com/watch?v=hVrSGKGU24g
+
+1.collegamento a supabase con le Key tramite dati api.
+
+database gestito da PostgreSQL
+
+sul BE collegamento client di istanza url+api keys collegata al JS (Prima installando sul terminal .. install @supbase/supbase-js) da acapire come installare su angular 
+
+
+Parte FE  
