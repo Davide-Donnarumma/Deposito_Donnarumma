@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+    
+<head>
+<!--UTF-8 specifica la codifica dei caratteri-->
+  <meta charset="UTF-8">
+
+  <!--meta tag {description} fornisce una breve descrizione della pagina
+utilizzata dai motori di ricerca-->
+  <meta name="description" content="Pagina per effettuare registrazione al sito">
+
+  <!--author indica l’autore del documento-->  
+  <meta name="author" content="Davide Donnarumma">
+
+  <!--viewport è fondamentale per il responsive design, controlla come la pagina
+viene adattata ai diversi dispositivi, in particolare su schermi
+mobili.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--inizio pagina con header, nav, main, article, footer.-->
+<title>Pagina di Registrazione</title>
+
+ <header>
+
+        <h1>Sito per registrarsi a Bho...</h1>
+
+    </header>
+
+<!--Struttura standard per caricamento img-->
+    <div style="width: 100%; text-align: left; margin-bottom: 25px;">
+    <img src="iron-man-hd-desktop-background-wallpaper-preview.jpg" 
+         alt="Sfondo Iron Man" 
+         style="max-width: 100%; height: auto; border-radius: 10px;">
+</div>
+
+    <nav>
+
+        <a href="#">Home</a>
+
+        <a href="#">Contatti</a>
+
+        <a href="#">Bho...</a>
+
+    </nav>
+
+    <main>
+
+        <section>
+
+            <h2>Questo è un sito di prova</h2>
+
+            <p>Di seguito i moduli da compilare per la registrazione</p>
+
+        </section>
+
+
+</head>
+<body>
+
+    <div>
+        <h1>Creazione Nuovo Account</h1>
+    </div>
+
+    <!-- Contenitore della descrizione -->
+    <div>
+        <h2>Benvenuto nel nostro servizio</h2>
+       <p>Compila il seguente modulo per creare il tuo account e accedere ai servizi della piattaforma.</p>
+
+        <p>I campi contrassegnati come <strong>obbligatori</strong> devono essere compilati, mentre alcune informazioni sono <em>facoltative</em>.</p>
+    </div>
+
+    <!-- Contenitore principale contenente il form -->
+    <div>
+        <form action="#" method="post">
+            
+            <!-- Campo di testo per il Nome -->
+            <label for="nome_utente">Nome Completo:</label>
+            <input type="text" id="nome_utente" name="nome" placeholder="Inserisca il Suo nome" required>
+            <br><br>
+
+            <!-- Campo per l'Email -->
+            <label for="email_utente">Indirizzo Email:</label>
+            <input type="email" id="email_utente" name="email" placeholder="esempio@email.it" required>
+            <br><br>
+
+            <!-- Campo per la Password -->
+            <label for="password_utente">Password:</label>
+            <input type="password" id="password_utente" name="password" placeholder="Crei una password sicura" required>
+            <br>
+            <small>La password deve contenere almeno 6 caratteri, di cui almeno un numero e un carattere speciale.</small>
+            <br><br>
+
+            <!-- Campo per confermare Password -->
+            <label for="Ripeterepassword_utente">Ripetere Password:</label>
+            <input type="password" id="Ripeterepassword_utente" name="password" placeholder="Ripetere la password sicura" required>
+            <br><br>
+
+            <!--Campo per la Citta di provenienza, non obbligatorio-->
+             <label for="Citta_utente">Citta (facoltativo):</label>
+            <input type="Citta" id="Citta_utente" name="Citta" placeholder="Inserisca la Citta di provenienza (facoltativo)">
+            <br><br>
+            
+            <!-- Radio Buttons per la scelta del piano -->
+            <p>Selezioni la tipologia di abbonamento desiderata:</p>
+            
+            <input type="radio" id="piano_base" name="tipo_piano" value="base" required>
+            <label for="piano_base">Piano Base (Gratuito)</label>
+            <br>
+            
+            <input type="radio" id="piano_premium" name="tipo_piano" value="premium">
+            <label for="piano_premium">Piano Premium</label>
+            <br><br>
+
+            <!-- Menu a tendina (Select) -->
+            <label for="provincia_residenza">Selezioni la Sua provincia di residenza:</label>
+            <select id="provincia_residenza" name="provincia" required>
+                <option value="">-- Selezioni un'opzione --</option>
+                <option value="na">Napoli</option>
+                <option value="sa">Salerno</option>
+                <option value="av">Avellino</option>
+                <option value="bn">Benevento</option>
+                <option value="ce">Caserta</option>
+            </select>
+            <br><br>
+
+        </form>
+    </div>
+
+   
+     <article>
+
+            <h2>Cosa ottieni:</h2>
+
+            <p>All'interno della tabella puo' trovare i piani di abbonamento.</p>
+
+        </article>
+
+    <!--Inizio Table-->
+    <table border="1">
+        <caption>Confronto Piani di Abbonamento</caption>
+        <thead>
+            <tr>
+                <th>Funzionalità</th>
+                <th>Piano Base (Gratuito)</th>
+                <th>Piano Premium (A pagamento)</th>
+            </tr>
+        </thead> 
+        <tbody>
+            <tr>
+                <td>Accesso ai Contenuti</td>
+                <td>Limitato</td>
+                <td>Illimitato</td>
+            </tr>
+
+        <tr>
+
+            <td>Supporto Tecnico</td>
+            <td>Email (48h)</td>
+            <td>Prioritario H24</td>
+
+        </tr>
+        </tbody>
+    </table>
+
+    <!--Fine table-->
+   <br>
+
+ <!-- Checkbox per i Termini di Servizio -->
+            <input type="checkbox" id="accetta_termini" name="termini" value="accettato" required>
+            <label for="accetta_termini">Dichiaro di aver letto e di accettare i Termini di Servizio.</label>
+            <br>
+
+            <!-- Pulsante per l'invio dei dati -->
+            <button type="submit">Completa la Registrazione</button>
+
+             <footer>
+
+        <p>Copyright 2026</p>
+
+    </footer>
+
+</body>
+</html>
+

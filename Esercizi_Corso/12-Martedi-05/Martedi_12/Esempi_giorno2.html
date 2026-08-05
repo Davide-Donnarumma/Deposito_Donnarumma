@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+    
+<head>
+<!--UTF-8 specifica la codifica dei caratteri-->
+  <meta charset="UTF-8">
+
+<!--meta tag {description} fornisce una breve descrizione della pagina
+utilizzata dai motori di ricerca-->
+  <meta name="description" content="Esempio di pagina HTML">
+
+<!--author indica l’autore del documento-->  
+  <meta name="author" content="Nome Autore">
+
+<!--viewport è fondamentale per il responsive design, controlla come la pagina
+viene adattata ai diversi dispositivi, in particolare su schermi
+mobili.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pagina con meta tag</title>
+
+<!--inizio pagina con header, nav, main, article, footer.-->
+<title>Esempio semantico</title>
+
+</head>
+
+<body>
+<!-- inizio header e nav-->
+
+    <header>
+
+        <h1>Sito di esempio</h1>
+
+    </header>
+
+
+    <nav>
+
+        <a href="#">Home</a>
+
+        <a href="#">Contatti</a>
+
+    </nav>
+    <main>
+
+        <section>
+
+            <h2>Sezione principale</h2>
+
+            <p>Contenuto della sezione.</p>
+
+        </section>
+
+        <!--Fine header e nav-->
+
+
+    <h1>Hello World</h1>
+<!--Inizio Table-->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Eta'</th>
+                <th>Ruolo</th>
+            </tr>
+        </thead> 
+        <tbody>
+            <tr>
+                <td>Davide</td>
+                <td>27</td>
+                <td>Studente</td>
+            </tr>
+
+        <tr>
+
+            <td>Laura</td>
+            <td>30</td>
+            <td>Docente</td>
+
+        </tr>
+        </tbody>
+    </table>
+    <!--Fine table-->
+
+    <!-- Menu a tendina per scegliere il corso -->
+    <label for="corso">Scegli un corso:</label>
+    <select id="corso" name="corso">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+    </select>
+
+    <br><br>
+
+    <!-- Checkbox per le tecnologie che già conosci -->
+    <p>Seleziona le tecnologie conosciute:</p>
+
+    <input type="checkbox" id="html" name="tecnologie" value="html">
+    <label for="html">HTML</label>
+    <br>
+
+    <input type="checkbox" id="css" name="tecnologie" value="css">
+    <label for="css">CSS</label>
+    <br>
+
+    <input type="checkbox" id="js" name="tecnologie" value="js">
+    <label for="js">JavaScript</label>
+
+    <article>
+
+            <h2>Articolo</h2>
+
+            <p>Testo di un contenuto indipendente.</p>
+
+        </article>
+
+    </main>
+
+
+    <footer>
+
+        <p>Copyright 2026</p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+/*nel root vengono definite le variabili globali*/
+
+:root {
+
+  --colore-principale: #3498db;
+
+  --colore-testo: #2c3e50;
+
+  --spaziatura: 20px;
+
+  --bordi-card: 1cqb solid black;
+
+}
+
+/*qui vengono impostate le specifiche di modifica del layout delle variabili globali */
+.card {
+
+  background-color: var(--colore-principale);
+
+  padding: var(--spaziatura);
+
+  color: white;
+
+  border: 1cqb solid black;
+
+}
+
+
+h1 {
+
+  color: var(--colore-testo);
+
+}
+
+/*before inserisce in questo caso un messaggio importante all'inizio*/
+.messaggio::before {
+
+  content: " {!} ";
+
+  color: red;
+
+  background-color: rgb(0, 0, 0);
+
+}
+
+/*after inserisce in questo caso un messaggio importante alla fine*/
+.messaggio::after {
+
+  content: " {V}";
+
+  color: green;
+
+  background-color: rgb(190, 206, 43);
+
+}
+
+/*questa box e' una TRANSITION integra un effetto fluido, dinamico e animato */
+.box {
+
+  width: 100px;
+
+  height: 100px;
+
+  background-color: steelblue;
+
+  transition: transform 0.5s;
+
+  animation: cambioColore 3s infinite;
+
+}
+
+/*transition crea un effetto fluido
+quando l’elemento cambia
+dimensione durante l’hover*/
+.box:hover {
+
+  transform: scale(1.2);
+
+}
+
+
+@keyframes cambioColore {
+
+  0% {
+
+    background-color: steelblue;
+
+  }
+
+
+  50% {
+
+    background-color: coral;
+
+  }
+
+
+  100% {
+
+    background-color: steelblue;
+
+  }
+
+}
+
+/*.box1 viene visualizzato
+normalmente come elemento blocco*/
+.box1 {
+
+  display: block;
+
+  background-color: lightblue;
+
+}
+
+
+/*.box2 è invisibile ma continua a
+occupare spazio nella pagina*/
+.box2 {
+
+  visibility: hidden;
+
+  background-color: lightgreen;
+
+}
+
+/*.box3 viene completamente rimosso
+dal layout e non occupa alcuno
+spazio visibile o strutturale*/
+.box3 {
+
+  display: none;
+
+  background-color: coral;
+
+}
